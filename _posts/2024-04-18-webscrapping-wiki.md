@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Scrapped data from Wikipedia"
-categories: [Python, Code]
+categories: [Python, Code, Project]
 ---
 
 In this post I will show you how I tried to scrap specific data from Wikipedia.
