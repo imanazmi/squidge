@@ -1,9 +1,11 @@
 ---
 layout: post
-title:  Code snippets in a blog post
+title:  Data Cleaning in SQL
 categories: [SQL,Code]
 ---
 
+Credits: AlexTheAnalyst on Youtube.
+This is a raw snippet using Nashville Housing data:
 ```	
 -- CLEANING DATA IN SQL QUERIES
 
