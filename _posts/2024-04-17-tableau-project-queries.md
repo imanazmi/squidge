@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Tableau Project Queries"
-date: YYYY-MM-DD hh:mm:ss -0000
 categories: [Tableau, Code, Project]
 
 ---
