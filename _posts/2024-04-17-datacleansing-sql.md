@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Data Cleaning in SQL
+title:  Data Cleansing in SQL
 categories: [SQL,Code]
 ---
 
