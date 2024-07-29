@@ -4,7 +4,7 @@ title:  Data Exploration in SQL
 categories: [SQL,Code]
 ---
 
-This is a raw snippet:
+This is a raw snippet using Covid data:
 
 ```sql  
 select *
