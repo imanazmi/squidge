@@ -6,6 +6,7 @@ categories: [SQL,Code]
 
 This is a raw snippet using Nashville Housing data:
 
+References: [AlexTheAnalyst](https://www.youtube.com/watch?v=qfyynHBFOsM&list=PLUaB-1hjhk8H48Pj32z4GZgGWyylqv85f)
 ```sql	
 -- CLEANING DATA IN SQL QUERIES
 
