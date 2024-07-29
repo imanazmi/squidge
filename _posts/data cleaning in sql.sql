@@ -1,3 +1,10 @@
+---
+layout: post
+title:  Code snippets in a blog post
+categories: [SQL,Code]
+---
+
+```	
 -- CLEANING DATA IN SQL QUERIES
 
 
@@ -166,6 +173,8 @@ from PortfolioProject..NashvilleHousing
 
 select *
 from PortfolioProject..NashvilleHousing
+
+```	
 
 alter table PortfolioProject..NashvilleHousing
 drop column owneraddress, taxdistrict, propertyaddress
