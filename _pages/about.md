@@ -15,7 +15,7 @@ Beyond my technical skills, I am good at adapting to new environment and a colla
 Recently (as of July 2024), I just completed a Power BI project that was hosted by Wanita Data Community on Discord and Instagram. This project involved analysing crowd trends on Klang Valley public transportation. During the 2-month project, I led a team of four people from different backgrounds to conduct an exploratory data analysis (EDA) on large datasets to identify trends and insights using Power BI. During the development, I managed to assist in dashboard creation and reports. This project taught me the importance of communication, responsibility and accountability between teammates. 
 </br></br>
 Currently, my friend and I are planning to analyse all sorts of data on a popular mobile game called Genshin Impact to see whether we can gain new insights.  
-</br></br>
+</br>
 I am continually seeking opportunities to expand my knowledge and stay updated with the latest industry or technology trends. My main goal is to become a data analyst who not only analyses data but also tells compelling stories through data, driving impactful business outcomes. 
 </br></br>
 Feel free to explore my portfolio and connect with me on LinkedIn or GitHub. I am excited to embark on this journey with like-minded people and look forward to contribute to innovative data projects. 
