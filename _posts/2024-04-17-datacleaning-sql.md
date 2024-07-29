@@ -4,9 +4,9 @@ title:  Data Cleaning in SQL
 categories: [SQL,Code]
 ---
 
-Credits: AlexTheAnalyst on Youtube.
 This is a raw snippet using Nashville Housing data:
-```	
+
+```sql	
 -- CLEANING DATA IN SQL QUERIES
 
 
@@ -184,3 +184,4 @@ drop column owneraddress, taxdistrict, propertyaddress
 alter table PortfolioProject..NashvilleHousing
 drop column saledate
 ```
+
