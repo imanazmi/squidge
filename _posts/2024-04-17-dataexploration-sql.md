@@ -1,3 +1,10 @@
+---
+layout: post
+title:  Data Exploration in SQL
+categories: [SQL,Code]
+---
+
+```  
 select *
 from PortfolioProject..CovidDeaths
 where continent is not null
@@ -151,3 +158,5 @@ where dea.continent is not null
 --view your created view
 select *
 from percentPopulationVaccinated
+
+```
