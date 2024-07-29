@@ -4,7 +4,7 @@ title: "Scrapped data from Wikipedia"
 categories: [Python, Code]
 ---
 
-```python
+
 {
  "cells": [
   {
@@ -7300,4 +7300,4 @@ categories: [Python, Code]
  "nbformat": 4,
  "nbformat_minor": 5
 }
-```
+
