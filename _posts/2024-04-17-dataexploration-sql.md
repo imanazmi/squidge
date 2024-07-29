@@ -4,7 +4,8 @@ title:  Data Exploration in SQL
 categories: [SQL,Code]
 ---
 
-This is a raw snippet using Covid data:
+In this post I will explain how I did data exploration on Covid-19 data using SQL.
+The data that I used was 
 
 ```sql  
 select *
