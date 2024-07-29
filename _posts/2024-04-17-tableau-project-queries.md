@@ -8,6 +8,7 @@ categories: [Tableau, Code, Project]
 
 References: [AlexTheAnalyst](https://www.youtube.com/watch?v=qfyynHBFOsM&list=PLUaB-1hjhk8H48Pj32z4GZgGWyylqv85f)
 
+```
 /*
 
 Queries used for Tableau Project
@@ -191,4 +192,4 @@ Group by Location, Population, date
 order by PercentPopulationInfected desc
 
 
-
+```
