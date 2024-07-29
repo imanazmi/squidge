@@ -5,7 +5,8 @@ categories: [SQL,Code]
 ---
 
 This is a raw snippet:
-```  
+
+```sql  
 select *
 from PortfolioProject..CovidDeaths
 where continent is not null
