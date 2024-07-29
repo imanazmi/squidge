@@ -1,3 +1,11 @@
+---
+layout: post
+title: "POST-TITLE"
+date: YYYY-MM-DD hh:mm:ss -0000
+categories: CATEGORY-1 CATEGORY-2
+---
+
+```python
 {
  "cells": [
   {
@@ -7293,3 +7301,4 @@
  "nbformat": 4,
  "nbformat_minor": 5
 }
+```
