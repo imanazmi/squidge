@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Data Cleansing in SQL
-categories: [SQL,Code]
+categories: [SQL,Code, Project]
 ---
 
 This is a raw snippet using Nashville Housing data:
