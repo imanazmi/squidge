@@ -1,3 +1,13 @@
+---
+layout: post
+title: "Tableau Project Queries"
+date: YYYY-MM-DD hh:mm:ss -0000
+categories: [Tableau, Code, Project]
+
+---
+
+References: [AlexTheAnalyst](https://www.youtube.com/watch?v=qfyynHBFOsM&list=PLUaB-1hjhk8H48Pj32z4GZgGWyylqv85f)
+
 /*
 
 Queries used for Tableau Project
