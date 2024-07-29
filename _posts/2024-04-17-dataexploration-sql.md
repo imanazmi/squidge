@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Data Exploration in SQL
-categories: [SQL,Code]
+categories: [SQL,Code, Project]
 ---
 
 In this post I will explain how I did data exploration on Covid-19 data using SQL.
