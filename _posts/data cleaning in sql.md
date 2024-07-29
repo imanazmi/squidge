@@ -174,10 +174,11 @@ from PortfolioProject..NashvilleHousing
 select *
 from PortfolioProject..NashvilleHousing
 
-```	
+	
 
 alter table PortfolioProject..NashvilleHousing
 drop column owneraddress, taxdistrict, propertyaddress
 
 alter table PortfolioProject..NashvilleHousing
 drop column saledate
+```
