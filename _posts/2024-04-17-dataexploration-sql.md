@@ -5,8 +5,10 @@ categories: [SQL,Code]
 ---
 
 In this post I will explain how I did data exploration on Covid-19 data using SQL.
+
 The data that I used was 
 
+References: [AlexTheAnalyst](https://www.youtube.com/watch?v=qfyynHBFOsM&list=PLUaB-1hjhk8H48Pj32z4GZgGWyylqv85f)
 ```sql  
 select *
 from PortfolioProject..CovidDeaths
