@@ -16,8 +16,8 @@ Below is the raw snippet of code including the comments.
 
 select *
 from PortfolioProject..NashvilleHousing
-
 ```
+
 
 2) Standardise date format
 ```sql
@@ -37,6 +37,7 @@ select *
 from PortfolioProject..NashvilleHousing
 ```
 
+
 3) Populate property address
 ```sql
 select a.ParcelID, a.PropertyAddress, b.ParcelID, b.PropertyAddress, isnull(a.PropertyAddress, b.PropertyAddress)
@@ -54,6 +55,7 @@ on a.ParcelID = b.ParcelID
 and a.[UniqueID ] <> b.[UniqueID ]
 where a.PropertyAddress is null
 ```
+
 
 4) Break out the address into individual columns  
 There are two ways to do the split
@@ -82,10 +84,10 @@ add propertySplitCity nvarchar(255);
 update NashvilleHousing
 set propertySplitCity = SUBSTRING(propertyaddress, CHARINDEX(',', propertyaddress) + 1 , LEN(PropertyAddress))
 
-
 select *
 from PortfolioProject.dbo.NashvilleHousing
 ```
+
 
 b) Short way
 ```sql
@@ -99,6 +101,7 @@ PARSENAME(replace(owneraddress, ',', '.'), 1)
 from PortfolioProject..NashvilleHousing
 ```
 
+
 i. Split parsename 3
 ```sql
 alter table nashvillehousing
@@ -108,6 +111,7 @@ update NashvilleHousing
 set ownerSplitAddress = PARSENAME(replace(owneraddress, ',', '.'), 3)
 ```
 
+
 ii. Split parsename 2
 ```sql
 alter table nashvillehousing
@@ -116,6 +120,7 @@ add ownerSplitCity nvarchar(255);
 update NashvilleHousing
 set ownerSplitCity = PARSENAME(replace(owneraddress, ',', '.'), 2)
 ```
+
 
 iii. Split parsename 1
 ```sql
@@ -129,8 +134,8 @@ select *
 from PortfolioProject..NashvilleHousing
 ```
 
-5) Change 'Y' and 'N' to 'Yes' and 'No' in SoldAsVacant field
 
+5) Change 'Y' and 'N' to 'Yes' and 'No' in SoldAsVacant field
 ```sql
 select distinct(SoldAsVacant), count(soldasvacant)
 from PortfolioProject..NashvilleHousing
@@ -146,16 +151,18 @@ from PortfolioProject..NashvilleHousing
 ```
 
 
--- a. update to count the number of yes and no
+a) Use update to count the number of 'Yes' and 'No'
+```sql
 update NashvilleHousing
 set SoldAsVacant = case when SoldAsVacant = 'Y' then 'Yes'
 		when SoldAsVacant = 'N' then 'No'
 		else SoldAsVacant
 		end
+```
 
 
--- 5) remove duplicates
-
+5) Remove duplicates
+```sql
 with rowNumCTE as(
 select *, 
 	ROW_NUMBER() 
@@ -185,13 +192,12 @@ where row_num > 1
 
 select *
 from PortfolioProject..NashvilleHousing
+```
 
--- 6) delete unused columns
-
+6) Delete unused columns
+```sql
 select *
 from PortfolioProject..NashvilleHousing
-
-	
 
 alter table PortfolioProject..NashvilleHousing
 drop column owneraddress, taxdistrict, propertyaddress
