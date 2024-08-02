@@ -170,7 +170,7 @@ from #percentPopulationVaccinated
 ```
 
 14) Create a view to store data for later visualisations
-```
+```sql
 --drop table if exists percentPopulationVaccinated
 create view percentPopulationVaccinated as
 select dea.continent, dea.location, dea.date, dea.population, vac.new_vaccinations,
