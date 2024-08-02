@@ -25,9 +25,6 @@ order by 1,2
 
 2) Check the total death count.
 ```sql
--- We take these out as they are not inluded in the above queries and want to stay consistent
--- European Union is part of Europe
-
 Select location, SUM(cast(new_deaths as int)) as TotalDeathCount
 From PortfolioProject..CovidDeaths
 --Where location like '%states%'
