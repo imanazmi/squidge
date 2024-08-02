@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Scrapped data from Wikipedia"
-categories: [Python, Code, Project]
+categories: [Python, Code, Project, Jupyter Notebook]
 ---
 
 Project information: 
