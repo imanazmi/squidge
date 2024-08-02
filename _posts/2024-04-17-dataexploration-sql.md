@@ -4,11 +4,17 @@ title:  Data Exploration in SQL
 categories: [SQL,Code, Project]
 ---
 
-In this post I will explain how I did data exploration on Covid-19 data using SQL.
+Project information: 
++ Language: SQL
++ Data: Covid-19
++ Objective: To explore the data behaviour, gain further insights and to understand the trends and patterns.
 
-The data that I used was 
 
 References: [AlexTheAnalyst](https://www.youtube.com/watch?v=qfyynHBFOsM&list=PLUaB-1hjhk8H48Pj32z4GZgGWyylqv85f)
+
+Below is the raw snippet of code including the comments.
+
+1) Select all data where the Continent is not empty/missing.
 ```sql  
 select *
 from PortfolioProject..CovidDeaths
@@ -18,61 +24,74 @@ order by 3,4
 --select *
 -- from PortfolioProject..CovidVaccinations
 -- order by 3,4
+```
 
--- select Data that we are going to be using
 
+2) Select which data that we are going to use
+```sql
 select Location, date, total_cases, new_cases, total_deaths, population
 from PortfolioProject..CovidDeaths
 order by 1,2
+```
 
--- Looking at Total Cases vs Total Deaths
--- shows likelihood of dying if you contract covid in your country
+a) Looking at Total Cases versus Total Deaths. This shows the likelihood of people dying if they contract covid in their country
+```sql
 Select Location, date, total_cases, total_deaths, (total_deaths/total_cases)*100 as DeathPercentage
 From PortfolioProject..CovidDeaths
 where location like '%states%'
 order by 1,2
+```
 
--- looking at total cases vs population
---shows what percentage of population got covid
+
+b) Looking at Total Cases versus Population. This shows what percentage of population that got covid
+```sql
 Select Location, date, total_cases, Population, (total_cases/population)*100 as PercentPopulationInfected
 From PortfolioProject..CovidDeaths
 --where location like '%states%'
 order by 1,2
+```
 
--- looking at countries with highest infection rate compared to population
+c) Looking at countries with the highest infection rate compared to population. 
+```sql
 Select Location, Population, MAX(total_cases) as highestInfectionCount, MAX((total_cases/population))*100 as PercentPopulationInfected
 From PortfolioProject..CovidDeaths
 --where location like '%states%'
 group by Location, Population
 order by PercentPopulationInfected desc
+```
 
--- showing countries with highest death count per population
+d) Showing countries with highest death count per population.
+```sql
 Select Location, MAX(cast(total_deaths as int)) as TotalDeathCount
 From PortfolioProject..CovidDeaths
 --where location like '%states%'
 where continent is not null
 group by Location
 order by TotalDeathCount desc
+```
 
---lets break things down by continent
-
+e) Let's break things down by continent.
+```sql
 Select continent, MAX(cast(total_deaths as int)) as TotalDeathCount
 From PortfolioProject..CovidDeaths
 --where location like '%states%'
 where continent is not null
 group by continent
 order by TotalDeathCount desc
+```
 
--- showing continents with the highest death count per population
-
+f) Showing continents with the highest death count per population.
+```sql
 Select continent, MAX(cast(total_deaths as int)) as TotalDeathCount
 From PortfolioProject..CovidDeaths
 --where location like '%states%'
 where continent is not null
 group by continent
 order by TotalDeathCount desc
+```
 
--- global numbers
+g) The global numbers.
+```sql
 Select date, sum(new_cases) as totalCases, sum(cast(new_deaths as int)) as totalDeaths, sum(cast(new_deaths as int))/sum(new_cases)*100 as DeathPercentage
 From PortfolioProject..CovidDeaths
 --where location like '%states%'
@@ -86,22 +105,25 @@ From PortfolioProject..CovidDeaths
 where continent is not null
 --group by date
 order by 1,2
+```
 
-
--- check table covidvaccinations
+h) Check table named 'CovidVaccinations'
+```sql
 select *
 from PortfolioProject..CovidVaccinations
+```
 
-
---join tables
-
+i) Join two tables called 'CovidDeaths' and 'CovidVaccinations' based on location and date.
+```sql
 select *
 from PortfolioProject..CovidDeaths dea
 join PortfolioProject..CovidVaccinations vac
 on dea.location = vac.location
 and dea.date = vac.date
+```
 
--- use cte
+j) Use cte
+```sql
 with popsVsVac(continent, location, date, population, new_vaccinations, rollingPeopleVaccinated)
 as
 (
@@ -118,9 +140,10 @@ where dea.continent is not null
 )
 select * , (rollingPeopleVaccinated/population)*100
 from popsVsVac
+```
 
---temp table
-
+k) Temporary table
+```sql
 drop table if exists #percentPopulationVaccinated
 create table #percentPopulationVaccinated
 (
@@ -145,9 +168,10 @@ and dea.date = vac.date
 
 select * , (rollingPeopleVaccinated/population)*100
 from #percentPopulationVaccinated
+```
 
-
--- create a view to store data for later visualisations
+l) Create a view to store data for later visualisations
+```
 --drop table if exists percentPopulationVaccinated
 create view percentPopulationVaccinated as
 select dea.continent, dea.location, dea.date, dea.population, vac.new_vaccinations,
@@ -159,9 +183,10 @@ on dea.location = vac.location
 and dea.date = vac.date
 where dea.continent is not null
 --order by 2,3
+```
 
---view your created view
+m) View the created view
+```sql
 select *
 from percentPopulationVaccinated
-
 ```
