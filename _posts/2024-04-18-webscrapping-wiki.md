@@ -7,7 +7,7 @@ categories: [Python, Code, Project, Jupyter Notebook]
 Project information: 
 + Language: Python
 + Web application: Jupyter Notebook
-+ Data: Covid-19
++ Data: Largest companies in the USA by revenue from Wikipedia
 + Objective: To scrap specific data from Wikipedia.
 
 
