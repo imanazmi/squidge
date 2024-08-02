@@ -4,7 +4,10 @@ title:  Data Cleansing in SQL
 categories: [SQL,Code, Project]
 ---
 
-Project description: I used SQL to clean data using Nashville Housing data 
+Project information: 
+> Language: SQL
+> Data: Nashville Housing
+> Objective: To clean the data
 
 
 References: [AlexTheAnalyst](https://www.youtube.com/watch?v=qfyynHBFOsM&list=PLUaB-1hjhk8H48Pj32z4GZgGWyylqv85f)
