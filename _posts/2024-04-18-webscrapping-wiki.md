@@ -31,6 +31,7 @@ soup = BeautifulSoup(page.text, 'html')
 print(soup)
 ```
 Snippet of the result:
+
 ![image](https://github.com/user-attachments/assets/99647095-d637-4fe7-833d-cec5c822e57d)
 
 4) Find the tag 'table'
@@ -38,6 +39,7 @@ Snippet of the result:
 soup.find('table')
 ```
 Snippet of the result:
+
 ![image](https://github.com/user-attachments/assets/a98e2779-c76d-4957-9313-2861c13113ce)
 
 5) Find all tags for 'table'
@@ -45,6 +47,7 @@ Snippet of the result:
 soup.find_all('table')[1]
 ```
 Snippet of the result:
+
 ![image](https://github.com/user-attachments/assets/7f301b19-9070-4ec8-af14-6f75deca53d8)
 
 6) Find the tags for 'table' with class named 'wikitable sortable'
@@ -52,6 +55,7 @@ Snippet of the result:
 soup.find('table', class_= 'wikitable sortable')
 ```
 Snippet of the result:
+
 ![image](https://github.com/user-attachments/assets/7447da80-7b3c-43c5-bd11-aac43fd7bf66)
 
 7) Assign #5 to 'table' variable and then print the variable.
@@ -60,6 +64,7 @@ table = soup.find_all('table')[1]
 print(table)
 ```
 Snippet of the result:
+
 ![image](https://github.com/user-attachments/assets/e9a8e56f-22d7-4550-a32b-3d4bc076d05c)
 
 8) Find the table with 'th' tag, assign it to a variable called 'world_titles' and print the variable.
@@ -68,6 +73,7 @@ world_titles = table.find_all('th')
 print(world_titles)
 ```
 Snippet of the result:
+
 ![image](https://github.com/user-attachments/assets/29882ac1-5ad6-4ec7-b7a8-e8cec7147001)
 
 9) Strip the text to to get the title and assign it to a variable called 'world_table_titles'.
@@ -76,6 +82,7 @@ world_table_titles = [title.text.strip() for title in world_titles]
 print(world_table_titles)
 ```
 Snippet of the result:
+
 ![image](https://github.com/user-attachments/assets/a2405ba4-8cb7-4a7b-8b45-e31e9af0f90e)
 
 10) Import library called pandas as pd.
@@ -89,6 +96,7 @@ df = pd.DataFrame(columns = world_table_titles)
 df
 ```
 Snippet of the result:
+
 ![image](https://github.com/user-attachments/assets/d2393446-2aaa-4967-b5bd-46f2ad9ea7d2)
 
 12) In the column, find all 'tr' tags.
@@ -109,6 +117,7 @@ for row in column_data[1:]:
 df 
 ```
 Snippet of the result:
+
 ![image](https://github.com/user-attachments/assets/32c7f796-f7b5-404f-9856-ccadb18bc3e8)
 
 14) Save the scrapped data into a CSV file.
