@@ -16,7 +16,6 @@ Below is the raw snippet of code including the comments.
 
 1) Select all to view overall data.
 ```sql	
-
 select *
 from PortfolioProject..NashvilleHousing
 ```
